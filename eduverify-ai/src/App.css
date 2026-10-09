@@ -79,6 +79,7 @@
   color: var(--color-tertiary);
 }
 
+<<<<<<< HEAD
 
 .mobile-actions {
   display: flex;
@@ -88,10 +89,15 @@
 
 @media (min-width: 768px) {
   .mobile-menu-btn, .mobile-actions {
+=======
+@media (min-width: 768px) {
+  .mobile-menu-btn {
+>>>>>>> b876f99 (Auto-sync: update 2 files)
     display: none;
   }
 }
 
+<<<<<<< HEAD
 .theme-toggle-btn {
   color: var(--color-tertiary);
   display: flex;
@@ -107,6 +113,8 @@
   color: var(--color-primary);
 }
 
+=======
+>>>>>>> b876f99 (Auto-sync: update 2 files)
 .mobile-nav {
   background-color: var(--color-card-bg);
   border-top: 1px solid var(--color-border);
