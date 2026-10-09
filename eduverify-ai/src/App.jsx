@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { ShieldCheck, UploadCloud, FileText, Settings, Menu, X } from 'lucide-react';
+import { ShieldCheck, UploadCloud, FileText, Settings, Menu, X, Sun, Moon } from 'lucide-react';
 import './App.css';
 
 // Layout Component
 const Layout = ({ children }) => {
-  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isDark, setIsDark] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [isDark]);
 
   const navLinks = [
     { path: '/', label: 'Home', icon: ShieldCheck },
@@ -41,15 +50,35 @@ const Layout = ({ children }) => {
                 </Link>
               );
             })}
+            
+            {/* Theme Toggle Desktop */}
+            <button 
+              className="theme-toggle-btn"
+              onClick={() => setIsDark(!isDark)}
+              title="Toggle theme"
+            >
+              {isDark ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
           </nav>
 
-          {/* Mobile Menu Toggle */}
-          <button 
-            className="mobile-menu-btn"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="mobile-actions">
+            {/* Theme Toggle Mobile */}
+            <button 
+              className="theme-toggle-btn mobile-theme-btn"
+              onClick={() => setIsDark(!isDark)}
+              title="Toggle theme"
+            >
+              {isDark ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
+            
+            {/* Mobile Menu Toggle */}
+            <button 
+              className="mobile-menu-btn"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Nav */}
