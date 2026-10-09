@@ -132,7 +132,7 @@ input:checked + .slider:before {
 .privacy-statement {
   display: flex;
   gap: 1rem;
-  background-color: #f8fafc;
+  background-color: var(--color-bg);
   align-items: flex-start;
 }
 
