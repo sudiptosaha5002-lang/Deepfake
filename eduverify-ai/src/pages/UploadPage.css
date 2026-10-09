@@ -54,7 +54,11 @@
 
 .drop-zone:hover {
   border-color: var(--color-primary-light);
+<<<<<<< HEAD
   background-color: var(--color-bg);
+=======
+  background-color: #fafafa;
+>>>>>>> 66a70f86 (Auto-sync: update 2 files)
 }
 
 .drop-zone.drag-active {
@@ -158,7 +162,11 @@
 
 .btn-icon:hover {
   background-color: var(--color-bg);
+<<<<<<< HEAD
   color: rgb(239 68 68);
+=======
+  color: rgb(239 68 68); /* Red on hover to cancel */
+>>>>>>> 66a70f86 (Auto-sync: update 2 files)
 }
 
 .preview-image-container {
