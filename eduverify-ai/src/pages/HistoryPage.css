@@ -106,7 +106,7 @@
 }
 
 .history-table th {
-  background-color: #f8fafc;
+  background-color: var(--color-bg);
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--color-tertiary);
@@ -117,7 +117,7 @@
 }
 
 .history-table tr:hover td {
-  background-color: #f8fafc;
+  background-color: var(--color-bg);
 }
 
 .text-right {
@@ -135,6 +135,6 @@
   color: var(--color-primary);
 }
 
-.text-emerald-600 { color: #059669; }
-.text-amber-600 { color: #d97706; }
-.text-slate-600 { color: #475569; }
+.text-emerald-600 { color: var(--color-genuine); }
+.text-amber-600 { color: var(--color-concern); }
+.text-slate-600 { color: var(--color-tertiary); }
