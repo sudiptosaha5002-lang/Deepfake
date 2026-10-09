@@ -1,17 +1,10 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { ShieldCheck, UploadCloud, FileText, Settings, Menu, X, Sun, Moon } from 'lucide-react';
-=======
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { ShieldCheck, UploadCloud, FileText, Settings, Menu, X } from 'lucide-react';
->>>>>>> b876f99 (Auto-sync: update 2 files)
 import './App.css';
 
 // Layout Component
 const Layout = ({ children }) => {
-<<<<<<< HEAD
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
   const location = useLocation();
@@ -24,11 +17,6 @@ const Layout = ({ children }) => {
     }
   }, [isDark]);
 
-=======
-  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
-  const location = useLocation();
-
->>>>>>> b876f99 (Auto-sync: update 2 files)
   const navLinks = [
     { path: '/', label: 'Home', icon: ShieldCheck },
     { path: '/upload', label: 'Verify Assignment', icon: UploadCloud },
@@ -62,7 +50,6 @@ const Layout = ({ children }) => {
                 </Link>
               );
             })}
-<<<<<<< HEAD
             
             {/* Theme Toggle Desktop */}
             <button 
@@ -92,17 +79,6 @@ const Layout = ({ children }) => {
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
-=======
-          </nav>
-
-          {/* Mobile Menu Toggle */}
-          <button 
-            className="mobile-menu-btn"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
->>>>>>> b876f99 (Auto-sync: update 2 files)
         </div>
 
         {/* Mobile Nav */}
