@@ -3,7 +3,7 @@ import urllib.error
 import json
 
 base_url = "https://app.backboard.io/api"
-api_key = "espr_FfCcaLn1XEd2YyFMxg1Tlhk6odUOq6voM0J6fLkOu0c"
+api_key = "espr_wlDf8qpEIX5IJJk2KHHmnZvAhiQR3qVYaAQLxhvbgVA"
 
 headers = {
     "Authorization": f"Bearer {api_key}",
