@@ -54,7 +54,7 @@
 
 .drop-zone:hover {
   border-color: var(--color-primary-light);
-  background-color: #fafafa;
+  background-color: var(--color-bg);
 }
 
 .drop-zone.drag-active {
