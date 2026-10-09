@@ -2,30 +2,36 @@
 
 :root {
   /* Color Palette - Calm, Professional, Trustworthy */
-  --color-primary: #0ea5e9; /* Light Blue */
+  --color-primary: #0ea5e9;
   --color-primary-hover: #0284c7;
   --color-primary-light: #e0f2fe;
   
-  --color-secondary: #0f172a; /* Slate 900 for dark text */
-  --color-tertiary: #475569; /* Slate 600 for secondary text */
+  --color-secondary: #0f172a;
+  --color-tertiary: #475569;
   
-  --color-bg: #f8fafc; /* Very light slate/gray background */
+  --color-bg: #f8fafc;
   --color-card-bg: #ffffff;
   
   --color-border: #e2e8f0;
   
   /* Status Colors */
-  --color-genuine: #10b981; /* Emerald green */
+  --color-genuine: #10b981;
   --color-genuine-light: #d1fae5;
   
-  --color-concern: #f59e0b; /* Amber/Orange */
+  --color-concern: #f59e0b;
   --color-concern-light: #fef3c7;
   
-  --color-uncertain: #64748b; /* Slate gray */
+  --color-uncertain: #64748b;
   --color-uncertain-light: #f1f5f9;
 
   /* Neutrals */
   --color-white: #ffffff;
+  --color-btn-primary-text: #ffffff;
+  
+  /* Badge text colors */
+  --color-genuine-text: #065f46;
+  --color-concern-text: #92400e;
+  --color-uncertain-text: #334155;
   
   /* Radii */
   --radius-sm: 0.25rem;
@@ -42,7 +48,7 @@
 .dark {
   --color-primary: #38bdf8;
   --color-primary-hover: #7dd3fc;
-  --color-primary-light: #0369a1;
+  --color-primary-light: rgba(56, 189, 248, 0.1);
   
   --color-secondary: #f8fafc;
   --color-tertiary: #94a3b8;
@@ -61,7 +67,13 @@
   --color-uncertain: #94a3b8;
   --color-uncertain-light: #334155;
 
-  --color-white: #0f172a;
+  --color-white: #1e293b;
+  --color-btn-primary-text: #0f172a;
+  
+  /* Badge text colors - bright for dark backgrounds */
+  --color-genuine-text: #6ee7b7;
+  --color-concern-text: #fcd34d;
+  --color-uncertain-text: #cbd5e1;
 }
 
 * {
@@ -125,7 +137,7 @@ button {
 
 .btn-primary {
   background-color: var(--color-primary);
-  color: var(--color-white);
+  color: var(--color-btn-primary-text);
   box-shadow: var(--shadow-sm);
 }
 
@@ -179,17 +191,17 @@ button {
 
 .badge-genuine {
   background-color: var(--color-genuine-light);
-  color: #065f46;
+  color: var(--color-genuine-text);
 }
 
 .badge-concern {
   background-color: var(--color-concern-light);
-  color: #92400e;
+  color: var(--color-concern-text);
 }
 
 .badge-uncertain {
   background-color: var(--color-uncertain-light);
-  color: #334155;
+  color: var(--color-uncertain-text);
 }
 
 /* Typography */

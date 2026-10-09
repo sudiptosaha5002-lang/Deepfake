@@ -79,7 +79,10 @@
   color: var(--color-tertiary);
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 007dc4e02d5306254fbed310891c468e2870df48
 .mobile-actions {
   display: flex;
   align-items: center;
@@ -89,6 +92,10 @@
 @media (min-width: 768px) {
   .mobile-menu-btn, .mobile-actions {
     display: none;
+  }
+  
+  .mobile-nav {
+    display: none !important;
   }
 }
 
