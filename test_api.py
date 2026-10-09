@@ -1,34 +1,21 @@
-import urllib.request
-import urllib.error
-import json
+import asyncio
+from backboard import BackboardClient
 
-base_url = "https://app.backboard.io/api"
-api_key = "espr_wlDf8qpEIX5IJJk2KHHmnZvAhiQR3qVYaAQLxhvbgVA"
-
-headers = {
-    "Authorization": f"Bearer {api_key}",
-    "Accept": "application/json"
-}
-
-endpoints = [
-    "/v1/models",
-    "/models",
-    "/user",
-    "/me",
-    "/users/me",
-    "/agents"
-]
-
-for ep in endpoints:
-    url = base_url + ep
-    req = urllib.request.Request(url, headers=headers)
-    print(f"Testing {url} ...")
+async def main():
+    api_key = "espr_wlDf8qpEIX5IJJk2KHHmnZvAhiQR3qVYaAQLxhvbgVA"
     try:
-        with urllib.request.urlopen(req) as response:
-            print(f"  Status Code: {response.status}")
-            print("  " + response.read().decode('utf-8'))
-    except urllib.error.HTTPError as e:
-        print(f"  HTTP Error: {e.code}")
-        print("  " + e.read().decode('utf-8'))
+        # Initialize the client with the new API key
+        client = BackboardClient(api_key=api_key)
+
+        print("Testing Backboard SDK with the provided API key...")
+        response = await client.send_message(
+            "Hello! This is a test message to verify the API key."
+        )
+
+        print("Success! The API key is working.")
+        print("Reply:", response.content)
     except Exception as e:
-        print(f"  Error: {e}")
+        print("Failed!")
+        print("Error details:", str(e))
+
+asyncio.run(main())
