@@ -46,7 +46,7 @@ const UploadPage = () => {
   const startAnalysis = () => {
     if (!selectedFile) return;
     setIsAnalyzing(true);
-    
+
     // Simulate analysis progress
     let currentProgress = 0;
     const interval = setInterval(() => {
@@ -80,18 +80,18 @@ const UploadPage = () => {
       </div>
 
       {!selectedFile ? (
-        <div 
+        <div
           className={`drop-zone card ${dragActive ? 'drag-active' : ''}`}
           onDragEnter={handleDrag}
           onDragLeave={handleDrag}
           onDragOver={handleDrag}
           onDrop={handleDrop}
         >
-          <input 
-            type="file" 
-            id="file-upload" 
-            className="file-input" 
-            accept="image/jpeg, image/png, image/webp" 
+          <input
+            type="file"
+            id="file-upload"
+            className="file-input"
+            accept="image/jpeg, image/png, image/webp"
             onChange={handleChange}
           />
           <label htmlFor="file-upload" className="drop-zone-content">
@@ -103,7 +103,7 @@ const UploadPage = () => {
           </label>
         </div>
       ) : (
-        <motion.div 
+        <motion.div
           className="file-preview-card card"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -136,8 +136,8 @@ const UploadPage = () => {
                 <span className="progress-percentage">{progress}%</span>
               </div>
               <div className="progress-bar-container">
-                <motion.div 
-                  className="progress-bar" 
+                <motion.div
+                  className="progress-bar"
                   initial={{ width: 0 }}
                   animate={{ width: `${progress}%` }}
                 ></motion.div>
@@ -146,13 +146,13 @@ const UploadPage = () => {
             </div>
           ) : (
             <div className="preview-actions">
-              <button 
+              <button
                 className="btn btn-outline"
                 onClick={() => setSelectedFile(null)}
               >
                 Cancel
               </button>
-              <button 
+              <button
                 className="btn btn-primary"
                 onClick={startAnalysis}
               >
