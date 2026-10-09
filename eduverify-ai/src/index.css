@@ -26,12 +26,15 @@
 
   /* Neutrals */
   --color-white: #ffffff;
+<<<<<<< HEAD
   --color-btn-primary-text: #ffffff;
   
   /* Badge text colors */
   --color-genuine-text: #065f46;
   --color-concern-text: #92400e;
   --color-uncertain-text: #334155;
+=======
+>>>>>>> a4dd065885a2b611f46faa77a65f2fa87bb5c306
   
   /* Radii */
   --radius-sm: 0.25rem;
@@ -48,7 +51,11 @@
 .dark {
   --color-primary: #38bdf8;
   --color-primary-hover: #7dd3fc;
+<<<<<<< HEAD
   --color-primary-light: rgba(56, 189, 248, 0.1);
+=======
+  --color-primary-light: #0369a1;
+>>>>>>> a4dd065885a2b611f46faa77a65f2fa87bb5c306
   
   --color-secondary: #f8fafc;
   --color-tertiary: #94a3b8;
@@ -67,6 +74,7 @@
   --color-uncertain: #94a3b8;
   --color-uncertain-light: #334155;
 
+<<<<<<< HEAD
   --color-white: #1e293b;
   --color-btn-primary-text: #0f172a;
   
@@ -74,6 +82,9 @@
   --color-genuine-text: #6ee7b7;
   --color-concern-text: #fcd34d;
   --color-uncertain-text: #cbd5e1;
+=======
+  --color-white: #0f172a;
+>>>>>>> a4dd065885a2b611f46faa77a65f2fa87bb5c306
 }
 
 * {
@@ -137,7 +148,11 @@ button {
 
 .btn-primary {
   background-color: var(--color-primary);
+<<<<<<< HEAD
   color: var(--color-btn-primary-text);
+=======
+  color: var(--color-white);
+>>>>>>> a4dd065885a2b611f46faa77a65f2fa87bb5c306
   box-shadow: var(--shadow-sm);
 }
 
@@ -191,17 +206,29 @@ button {
 
 .badge-genuine {
   background-color: var(--color-genuine-light);
+<<<<<<< HEAD
   color: var(--color-genuine-text);
+=======
+  color: #065f46;
+>>>>>>> a4dd065885a2b611f46faa77a65f2fa87bb5c306
 }
 
 .badge-concern {
   background-color: var(--color-concern-light);
+<<<<<<< HEAD
   color: var(--color-concern-text);
+=======
+  color: #92400e;
+>>>>>>> a4dd065885a2b611f46faa77a65f2fa87bb5c306
 }
 
 .badge-uncertain {
   background-color: var(--color-uncertain-light);
+<<<<<<< HEAD
   color: var(--color-uncertain-text);
+=======
+  color: #334155;
+>>>>>>> a4dd065885a2b611f46faa77a65f2fa87bb5c306
 }
 
 /* Typography */
